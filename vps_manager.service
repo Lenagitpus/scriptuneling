@@ -1,0 +1,13 @@
+[Unit]
+Description=VPS Manager Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/vps_manager
+Restart=on-failure
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
